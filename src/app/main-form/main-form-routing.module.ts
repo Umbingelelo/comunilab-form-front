@@ -4,6 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { InitialDescriptionComponent } from './initial-description/initial-description.component';
 import { AboutYouFormComponent } from './about-you-form/about-you-form.component';
 import { AboutYourCommunityComponent } from './about-your-community/about-your-community.component';
+import { UserChoiceComponent } from './user-choice/user-choice.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'community-transition',
     component: AboutYourCommunityComponent
+  },
+  {
+    path: 'user-choice',
+    component: UserChoiceComponent
   }
 
 

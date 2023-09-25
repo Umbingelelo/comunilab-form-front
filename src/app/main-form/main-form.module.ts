@@ -6,6 +6,7 @@ import { InitialDescriptionComponent } from './initial-description/initial-descr
 import { AboutYouFormComponent } from './about-you-form/about-you-form.component';
 import { FlowbiteModule } from 'flowbite-angular';
 import { AboutYourCommunityComponent } from './about-your-community/about-your-community.component';
+import { UserChoiceComponent } from './user-choice/user-choice.component';
 
 
 
@@ -15,7 +16,8 @@ import { AboutYourCommunityComponent } from './about-your-community/about-your-c
     WelcomeComponent,
     InitialDescriptionComponent,
     AboutYouFormComponent,
-    AboutYourCommunityComponent
+    AboutYourCommunityComponent,
+    UserChoiceComponent
   ],
   imports: [
     CommonModule,
