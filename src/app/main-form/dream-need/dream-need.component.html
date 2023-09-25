@@ -1,1 +1,61 @@
-<p>dream-need works!</p>
+<section class="min-h-screen background">
+  <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-0">
+    <div class="p-6 ">
+      <p class="text-6xl text-gray-900 dark:text-white" style="color: #3B865D;">Tu Sueño</p>
+      <form>
+        <label for="message" class="block mb-2 mt-5 text-xl font-medium text-gray-900" style="color: #3B865D;">Describe
+          un proyecto o idea de ensueño para tu comunidad</label>
+        <textarea id="message" rows="4"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Escribe tu sueño aquí..."></textarea>
+        <div class="mb-6">
+          <div class="grid grid-rows-1 grid-cols-2 mt-1">
+            <div class="flex items-center">
+              <label for="message" class="block mb-2 mt-5 text-xl font-medium text-gray-900" style="color: #3B865D;">
+                Sube la imagen que mas represente tu sueño </label>
+            </div>
+            <button type="button" (click)="clearImage()"
+              class="ml-auto text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-2.5 py-2.5 mr-2 mb-2">
+              Borrar
+            </button>
+          </div>
+          <div class="flex items-center justify-center w-full pr-2">
+            <label for="picture-file"
+              class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+              <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                <svg class="w-8 h-8 mb-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 20 16">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                </svg>
+                <p class="mb-2 text-sm text-gray-500">
+                  <span class="font-semibold">
+                    Click
+                  </span>
+                  o arrastra y suelta
+                </p>
+                <p class="text-xs text-gray-500">PNG, JPG</p>
+              </div>
+              <input (change)="onFileSelected($event)" id="picture-file" type="file" class="hidden" />
+            </label>
+          </div>
+
+        </div>
+      </form>
+      <div class="text-center">
+        <button type="button" [routerLink]="['/need']"
+          class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+          Atras</button>
+        <button type="button" [routerLink]="['/need/strengths']"
+          class="ml-auto focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+          Siguiente</button>
+      </div>
+    </div>
+    <div class="p-6 ">
+      <img class="h-auto ml-auto max-w-xs" src="../../../assets/images/logos/logo.png" alt="image description">
+      <img class="h-auto mx-auto max-w-full" src="../../../assets/images/storyset/dream.gif" style="margin-top: -8rem;"
+        alt="about-me">
+    </div>
+  </div>
+
+</section>

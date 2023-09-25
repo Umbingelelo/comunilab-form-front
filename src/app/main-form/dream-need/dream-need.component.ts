@@ -1,10 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dream-need',
   templateUrl: './dream-need.component.html',
   styleUrls: ['./dream-need.component.css']
 })
-export class DreamNeedComponent {
+export class DreamNeedComponent implements OnInit {
+  imageSelected: File | undefined;
+  imagePreview: string = '';
+  imageModified: boolean = false;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  async uploadFileToS3(storeId: number, image: File, fileName: string) {
+    const fd = new FormData();
+    fd.append('file', image, fileName);
+
+  }
+
+  onFileSelected(event: any): void {
+    if (!event.target.files[0]) return;
+    const fileSelected = <File>event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (e: any) => {
+      this.imageSelected = fileSelected;
+      this.imagePreview = URL.createObjectURL(this.imageSelected);
+    };
+    reader.readAsDataURL(fileSelected);
+  }
+
+  clearImage(): void {
+    this.imageSelected = undefined;
+    this.imagePreview = '';
+    this.imageModified = true;
+  }
+
 
 }

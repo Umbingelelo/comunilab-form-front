@@ -1,1 +1,47 @@
-<p>strengths-need works!</p>
+<section class="min-h-screen background">
+  <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-0">
+    <div class="p-6 ">
+      <p class="text-6xl text-gray-900 dark:text-white" style="color: #3B865D;">Fortalezas de tu comunidad</p>
+      <form>
+        <label for="message" class="block mb-2 mt-5 text-xl font-medium text-gray-900" style="color: #3B865D;">¿Qué
+          caracteriza a tu comunidad? (fortalezas, rasgos, etc)
+        </label>
+        <textarea id="message" rows="6"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Escribe tu sueño aquí..."></textarea>
+
+        <label for="message" class="block mb-2 mt-5 text-xl font-medium text-gray-900" style="color: #3B865D;">¿En que
+          lugar llevarías a cabo tu idea? </label>
+        <textarea id="message" rows="4"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Escribe tu sueño aquí..."></textarea>
+
+      </form>
+      <label for="message" class="block mb-2 mt-5 text-xl font-medium text-gray-900" style="color: #3B865D;">Ingresa las
+        personas o entidades que crees que estarían involucrados con tu idea</label>
+      <select multiple id="countries_multiple"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option selected>Choose countries</option>
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+        <option value="FR">France</option>
+        <option value="DE">Germany</option>
+      </select>
+      <div class="text-center">
+        <button type="button" [routerLink]="['/need/strengths']"
+          class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+          Atras</button>
+        <button type="button" [routerLink]="['/need/concerns']"
+          class="ml-auto focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+          Siguiente</button>
+      </div>
+    </div>
+
+    <div class="p-6 ">
+      <img class="h-auto ml-auto max-w-xs" src="../../../assets/images/logos/logo.png" alt="image description">
+      <img class="h-auto mx-auto max-w-xl" src="../../../assets/images/storyset/community.png"
+        style="margin-top: -8rem;" alt="about-me">
+    </div>
+  </div>
+
+</section>
