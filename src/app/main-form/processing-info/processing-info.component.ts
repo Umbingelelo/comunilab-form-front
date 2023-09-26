@@ -15,14 +15,12 @@ export class ProcessingInfoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    //setTimeout(() => {
-    //this.router.navigate(['send-email'])
-    //}, 10000);
-
-    this.getAllDataFromLocalStorage().then(() => {
-      console.log('All data saved');
-    }
-    );
+    setTimeout(() => {
+      this.getAllDataFromLocalStorage().then(() => {
+        console.log('All data saved');
+      }
+      )
+    }, 5000);
 
   }
 
