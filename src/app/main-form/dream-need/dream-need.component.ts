@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormService } from '../service/form.service';
 
 @Component({
   selector: 'app-dream-need',
@@ -15,7 +16,9 @@ export class DreamNeedComponent implements OnInit {
     image: ''
   };
 
-  constructor() { }
+  constructor(
+    private formService: FormService,
+  ) { }
 
   ngOnInit(): void {
 
@@ -45,6 +48,7 @@ export class DreamNeedComponent implements OnInit {
   }
 
   saveDreamForm(): void {
+    this.formService.saveImage(this.imageSelected)
     this.dreamUserForm.image = this.imageSelected;
     console.log(this.dreamUserForm);
     localStorage.setItem('dreamUserForm', JSON.stringify(this.dreamUserForm));

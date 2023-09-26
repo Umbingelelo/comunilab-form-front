@@ -17,7 +17,7 @@ export class ProcessingInfoComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.getAllDataFromLocalStorage().then(() => {
-        console.log('All data saved');
+        this.router.navigate(['/send-email']);
       }
       )
     }, 5000);

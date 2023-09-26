@@ -19,7 +19,7 @@ import { InformationProjectComponent } from './information-project/information-p
 
 const routes: Routes = [
   {
-    path: 'welcome',
+    path: '',
     component: WelcomeComponent,
   },
   {
