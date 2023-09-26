@@ -9,10 +9,16 @@ export class DreamNeedComponent implements OnInit {
   imageSelected: File | undefined;
   imagePreview: string = '';
   imageModified: boolean = false;
+  imageAsPNG: any;
+  dreamUserForm: any = {
+    dream: '',
+    image: ''
+  };
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   async uploadFileToS3(storeId: number, image: File, fileName: string) {
@@ -38,5 +44,11 @@ export class DreamNeedComponent implements OnInit {
     this.imageModified = true;
   }
 
-
+  saveDreamForm(): void {
+    this.dreamUserForm.image = this.imageSelected;
+    console.log(this.dreamUserForm);
+    localStorage.setItem('dreamUserForm', JSON.stringify(this.dreamUserForm));
+  }
 }
+
+

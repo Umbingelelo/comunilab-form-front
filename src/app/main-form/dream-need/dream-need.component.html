@@ -5,7 +5,7 @@
       <form>
         <label for="message" class="block mb-2 mt-5 text-xl font-medium text-gray-900" style="color: #3B865D;">Describe
           un proyecto o idea de ensueño para tu comunidad</label>
-        <textarea id="message" rows="4"
+        <textarea id="message" rows="4" [(ngModel)]="dreamUserForm.dream" name="message"
           class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Escribe tu sueño aquí..."></textarea>
         <div class="mb-6">
@@ -19,7 +19,7 @@
               Borrar
             </button>
           </div>
-          <div class="flex items-center justify-center w-full pr-2">
+          <div *ngIf="!imagePreview" class="flex items-center justify-center w-full pr-2">
             <label for="picture-file"
               class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
               <div class="flex flex-col items-center justify-center pt-5 pb-6">
@@ -36,8 +36,11 @@
                 </p>
                 <p class="text-xs text-gray-500">PNG, JPG</p>
               </div>
-              <input (change)="onFileSelected($event)" id="picture-file" type="file" class="hidden" />
+              <input (change)="onFileSelected($event)" id="picture-file" type="file" class="hidden" name="image" />
             </label>
+          </div>
+          <div *ngIf="imagePreview" id="picturePreview">
+            <img class="max-h-min border border-gray-800 mx-auto" src="{{ imagePreview }}">
           </div>
 
         </div>
@@ -46,7 +49,7 @@
         <button type="button" [routerLink]="['/need']"
           class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
           Atras</button>
-        <button type="button" [routerLink]="['/need/strengths']"
+        <button type="button" (click)=" saveDreamForm()" [routerLink]="['/need/strengths']"
           class="ml-auto focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
           Siguiente</button>
       </div>

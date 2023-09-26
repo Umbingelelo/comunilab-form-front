@@ -6,32 +6,56 @@
         <label for="message" class="block mb-2 mt-5 text-xl font-medium text-gray-900" style="color: #3B865D;">¿Qué
           caracteriza a tu comunidad? (fortalezas, rasgos, etc)
         </label>
-        <textarea id="message" rows="6"
+        <textarea id="message-feat" rows="6" [(ngModel)]="strengthsForm.feats" name="message-feat"
           class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Escribe tu sueño aquí..."></textarea>
 
         <label for="message" class="block mb-2 mt-5 text-xl font-medium text-gray-900" style="color: #3B865D;">¿En que
           lugar llevarías a cabo tu idea? </label>
-        <textarea id="message" rows="4"
+        <textarea id="message-place" rows="4" [(ngModel)]="strengthsForm.place" name="message-place"
           class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Escribe tu sueño aquí..."></textarea>
 
       </form>
       <label for="message" class="block mb-2 mt-5 text-xl font-medium text-gray-900" style="color: #3B865D;">Ingresa las
-        personas o entidades que crees que estarían involucrados con tu idea</label>
-      <select multiple id="countries_multiple"
+        3 personas o entidades mas importantes que crees que estarían involucrados con tu idea</label>
+
+
+      <p class="text-md  font-medium text-gray-900" style="color: #5b5e5c;">Persona o entidad 1</p>
+      <select id="option1" [(ngModel)]="firstOption" name="option1"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        <option selected>Choose countries</option>
-        <option value="US">United States</option>
-        <option value="CA">Canada</option>
-        <option value="FR">France</option>
-        <option value="DE">Germany</option>
+        <option selected>Profesores</option>
+        <option selected>Estudiantes</option>
+        <option selected>Directivos de estudios</option>
+        <option selected>Directivos de la universidad</option>
+        <option selected>Departamento de Informática</option>
       </select>
-      <div class="text-center">
-        <button type="button" [routerLink]="['/need/strengths']"
+
+      <p class="text-md font-medium text-gray-900" style="color: #5b5e5c;">Persona o entidad 2</p>
+      <select id="option2" [(ngModel)]="secondOption" name="option2"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option selected>Profesores</option>
+        <option selected>Estudiantes</option>
+        <option selected>Directivos de estudios</option>
+        <option selected>Directivos de la universidad</option>
+        <option selected>Departamento de Informática</option>
+      </select>
+
+      <p class="text-md  font-medium text-gray-900" style="color: #5b5e5c;">Persona o entidad 3</p>
+      <select id="option3" [(ngModel)]="thirdOption" name="option3"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option selected>Profesores</option>
+        <option selected>Estudiantes</option>
+        <option selected>Directivos de estudios</option>
+        <option selected>Directivos de la universidad</option>
+        <option selected>Departamento de Informática</option>
+      </select>
+
+      <div class="text-center mt-10">
+        <button type="button" [routerLink]="['/need/dream']"
           class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
           Atras</button>
-        <button type="button" [routerLink]="['/need/concerns']"
+        <button type="button" [routerLink]="['/need/concerns']" (click)="saveStrengthsForm()"
           class="ml-auto focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
           Siguiente</button>
       </div>
