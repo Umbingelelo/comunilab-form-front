@@ -13,7 +13,7 @@
       <div class="mb-6">
         <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre del
           proyecto</label>
-        <input type="text" id="default-input"
+        <input type="text" id="default-input" [(ngModel)]="projectForm.name" name="name"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
       </div>
       <label class="relative inline-flex items-center cursor-pointer">
@@ -27,7 +27,7 @@
         <div class="mb-6">
           <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">URL del sitio
             web</label>
-          <input type="text" id="default-input"
+          <input type="text" id="website" [(ngModel)]="projectForm.websiteUrl" name="website"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
         </div>
       </div>
@@ -50,7 +50,7 @@
           <div class="mb-6">
             <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">URL de la
               página de instagram</label>
-            <input type="text" id="default-input"
+            <input type="text" id="insta" [(ngModel)]="projectForm.instagramUrl" name="insta"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           </div>
         </div>
@@ -65,7 +65,7 @@
           <div class="mb-6">
             <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">URL de la
               página de facebook</label>
-            <input type="text" id="default-input"
+            <input type="text" id="face" [(ngModel)]="projectForm.facebookUrl" name="facebook"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           </div>
         </div>
@@ -80,7 +80,7 @@
           <div class="mb-6">
             <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">URL de la
               página de twitter</label>
-            <input type="text" id="default-input"
+            <input type="text" id="twit" [(ngModel)]="projectForm.twitterUrl" name="twitter"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           </div>
         </div>
@@ -95,7 +95,7 @@
           <div class="mb-6">
             <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">URL de la
               página de la otra red social</label>
-            <input type="text" id="default-input"
+            <input type="text" id="other" [(ngModel)]="projectForm.otherUrl" name="other"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           </div>
         </div>
@@ -106,7 +106,7 @@
           oportunidad que resuelve</label>
         <span class="text-xs text-gray-500 dark:text-gray-400">Señala cuál es el problema u oportunidad específica que
           pretenden resolver, a quiénes les afecta dentro de la comunidad, y cómo les afecta</span>
-        <textarea id="default-input" rows="3"
+        <textarea id="prob" rows="3" [(ngModel)]="projectForm.problem" name="problem"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
       </div>
 
@@ -117,7 +117,7 @@
           les han ocurrido, sus atributos principales y los beneficios que entrega a los usuarios. Qué ventajas
           incorporan y como se diferencian de otras alternativas que hoy buscan resolver el mismo problema
           identificado.</span>
-        <textarea id="default-input" rows="3"
+        <textarea id="sol" rows="3" [(ngModel)]="projectForm.solution" name="solution"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
       </div>
 
@@ -130,7 +130,7 @@
           llevar a cabo la solución que proponen?</span>
         <span class="text-xs text-gray-500 dark:text-gray-400">¿Qué expectativas esperan cumplir para la
           comunidad?</span>
-        <textarea id="default-input" rows="3"
+        <textarea id="mot" rows="3" [(ngModel)]="projectForm.motivation" name="motivation"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
       </div>
 
@@ -138,7 +138,7 @@
         <label for="default-select" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Estado de
           avance</label>
         <span class="text-xs text-gray-500 dark:text-gray-400">¿En qué etapa se encuentra el proyecto?</span>
-        <select id="default-select"
+        <select id="stat" [(ngModel)]="projectForm.status" name="status"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           <option value="idea">Idea</option>
           <option value="desarrollo">Desarrollo</option>
@@ -151,8 +151,8 @@
           esperado</label>
         <span class="text-xs text-gray-500 dark:text-gray-400">Selecciona el rango de presupuesto esperado para el
           proyecto</span>
-        <input type="range" id="budget-range" name="budget-range" min="0" max="100" value="50"
-          class="block w-full mt-2">
+        <input type="range" id="budget-range" name="budget-range" min="0" max="100" value="50" step="1"
+          [(ngModel)]="projectForm.budget" class="block w-full mt-2">
         <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400">
           <span>0</span>
           <span>150 + UF</span>
@@ -162,7 +162,7 @@
         <button type="button" [routerLink]="['/project/manager']"
           class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
           Atras</button>
-        <button type="button" [routerLink]="['/ods']"
+        <button type="button" [routerLink]="['/ods']" (click)="saveProjectForm()"
           class="ml-auto focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
           Siguiente</button>
       </div>

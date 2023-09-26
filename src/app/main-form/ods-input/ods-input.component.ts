@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ods-input',
   templateUrl: './ods-input.component.html',
   styleUrls: ['./ods-input.component.css']
 })
-export class OdsInputComponent {
+export class OdsInputComponent implements OnInit {
   images: any[] = [
     { src: '../../../assets/images/ods/S_SDG_PRINT-01.jpg', isSelected: false },
     { src: '../../../assets/images/ods/S_SDG_PRINT-02.jpg', isSelected: false },
@@ -25,6 +25,27 @@ export class OdsInputComponent {
     { src: '../../../assets/images/ods/S_SDG_PRINT-16.jpg', isSelected: false },
     { src: '../../../assets/images/ods/S_SDG_PRINT-17.jpg', isSelected: false },
   ];
+
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  getOnlyNumberOfString() {
+    return this.images.filter(image => image.isSelected).length;
+  }
+
+  cleanNameOfSelectedImages(selectedImages: any[]) {
+    return selectedImages.map(image => "ODS-" + image.src.split('/')[6].split('.')[0].split('-')[1]);
+  }
+
+  saveSelectedImages() {
+    const selectedImages = this.images.filter(image => image.isSelected);
+    const selectedImagesToSave = this.cleanNameOfSelectedImages(selectedImages);
+    localStorage.setItem('selectedImagesODS', JSON.stringify(selectedImagesToSave));
+  }
+
 
   toggleSelection(image: any) {
     image.isSelected = !image.isSelected;

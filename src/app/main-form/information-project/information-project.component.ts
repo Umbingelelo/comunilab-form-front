@@ -13,8 +13,30 @@ export class InformationProjectComponent implements OnInit {
   hasTwitter = true;
   hasOther = true;
   hasRRSS = true;
+
+  public projectForm = {
+    name: '',
+    websiteUrl: '',
+    facebookUrl: '',
+    instagramUrl: '',
+    twitterUrl: '',
+    otherUrl: '',
+    problem: '',
+    solution: '',
+    motivation: '',
+    status: '',
+    budget: '',
+
+  };
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  saveProjectForm() {
+    console.log(this.projectForm);
+    localStorage.setItem('projectForm', JSON.stringify(this.projectForm));
+  }
+
 }
