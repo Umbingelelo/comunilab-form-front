@@ -6,3 +6,7 @@
 .max-w-xs {
   max-width: 15rem;
 }
+
+.selected {
+  border: 2px solid blue; /* Cambia esto según tu diseño deseado */
+}
