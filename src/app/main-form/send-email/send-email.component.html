@@ -1,1 +1,25 @@
-<p>send-email works!</p>
+<section class="min-h-screen background">
+  <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-0">
+    <div class="p-6">
+    </div>
+    <div class="p-6 ">
+      <img class="h-auto ml-auto max-w-xs" src="../../../assets/images/logos/logo.png" alt="image description">
+    </div>
+  </div>
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6" style="margin-top: -14rem;">
+    <div class="mx-auto max-w-screen text-center">
+      <p class="text-6xl" style="color: #3B865D;"> Hemos recolectado tu información correctamente </p>
+
+      <img class="h-auto max-w-lg mx-auto" src="../../../assets/images/storyset/mail-sent.png" alt="image description">
+      <p class="text-3xl"> Se te ha enviado un correo con la clave de acceso a la plataforma, donde podrás ver los
+        proyectos e ideas por y para tu comunidad</p>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button type="button" [routerLink]="['/welcome']"
+      class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+      Ir</button>
+  </div>
+
+</section>

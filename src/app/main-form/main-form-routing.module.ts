@@ -11,6 +11,8 @@ import { DreamNeedComponent } from './dream-need/dream-need.component';
 import { StrengthsNeedComponent } from './strengths-need/strengths-need.component';
 import { ConcernsNeedComponent } from './concerns-need/concerns-need.component';
 import { OdsInputComponent } from './ods-input/ods-input.component';
+import { ProcessingInfoComponent } from './processing-info/processing-info.component';
+import { SendEmailComponent } from './send-email/send-email.component';
 
 
 const routes: Routes = [
@@ -56,6 +58,14 @@ const routes: Routes = [
   }, {
     path: 'ods',
     component: OdsInputComponent
+  },
+  {
+    path: 'load-info',
+    component: ProcessingInfoComponent
+  },
+  {
+    path: 'send-email',
+    component: SendEmailComponent
   },
 
 
