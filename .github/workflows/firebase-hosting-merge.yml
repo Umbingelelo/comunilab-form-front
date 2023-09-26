@@ -18,3 +18,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_COMUNILAB_1FBFC }}'
           channelId: live
           projectId: comunilab-1fbfc
+        env:
+            FIREBASE_CLI_EXPERIMENTS: webframeworks
