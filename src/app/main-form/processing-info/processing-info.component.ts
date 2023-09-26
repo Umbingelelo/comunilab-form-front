@@ -26,6 +26,9 @@ export class ProcessingInfoComponent implements OnInit {
 
   async getAllDataFromLocalStorage() {
     const data = await {
+      dreamUserForm: JSON.parse(localStorage.getItem('dreamUserForm') || '{}'),
+      strengthsForm: JSON.parse(localStorage.getItem('strengthsForm') || '{}'),
+      concernsForm: JSON.parse(localStorage.getItem('concernsForm') || '{}'),
       aboutYouForm: JSON.parse(localStorage.getItem('aboutYouForm') || '{}'),
       odsForm: JSON.parse(localStorage.getItem('selectedImagesODS') || '{}'),
       projectForm: JSON.parse(localStorage.getItem('projectForm') || '{}'),
