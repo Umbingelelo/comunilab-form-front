@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "comunilab-1fbfc"
+  },
+  "targets": {
+    "comunilab-1fbfc": {
+      "hosting": {
+        "comunlab-form": [
+          "comunilab-1fbfc"
+        ]
+      }
+    }
+  }
+}

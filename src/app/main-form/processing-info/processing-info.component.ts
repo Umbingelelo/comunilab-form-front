@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormService } from '../service/form.service';
 
 @Component({
   selector: 'app-processing-info',
@@ -10,15 +11,31 @@ export class ProcessingInfoComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private formService: FormService,
   ) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.router.navigate(['send-email']);
-    }, 5000);
+    //setTimeout(() => {
+    //this.router.navigate(['send-email'])
+    //}, 10000);
 
+    this.getAllDataFromLocalStorage().then(() => {
+      console.log('All data saved');
+    }
+    );
 
   }
+
+  async getAllDataFromLocalStorage() {
+    const data = await {
+      aboutYouForm: JSON.parse(localStorage.getItem('aboutYouForm') || '{}'),
+      odsForm: JSON.parse(localStorage.getItem('selectedImagesODS') || '{}'),
+      projectForm: JSON.parse(localStorage.getItem('projectForm') || '{}'),
+      managerForm: JSON.parse(localStorage.getItem('managerForm') || '{}'),
+    };
+    await this.formService.saveAllData(data);
+  }
+
 
 
 
