@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainFormModule } from './main-form/main-form.module';
 import { FlowbiteModule } from 'flowbite-angular';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,8 @@ import { FlowbiteModule } from 'flowbite-angular';
     AppRoutingModule,
     MainFormModule,
     FlowbiteModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]

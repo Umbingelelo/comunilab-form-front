@@ -21,7 +21,7 @@ export class AboutYouFormComponent implements OnInit {
   }
 
   saveAboutYou() {
-    localStorage.setItem('aboutYouForm)', JSON.stringify(this.aboutYouForm));
+    localStorage.setItem('aboutYouForm', JSON.stringify(this.aboutYouForm));
   }
 
 }
