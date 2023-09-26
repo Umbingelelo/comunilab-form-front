@@ -17,6 +17,8 @@ import { InformationProjectComponent } from './information-project/information-p
 import { OdsInputComponent } from './ods-input/ods-input.component';
 import { ProcessingInfoComponent } from './processing-info/processing-info.component';
 import { SendEmailComponent } from './send-email/send-email.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -42,7 +44,8 @@ import { SendEmailComponent } from './send-email/send-email.component';
   imports: [
     CommonModule,
     MainFormRoutingModule,
-    FlowbiteModule
+    FlowbiteModule,
+    FormsModule
 
   ]
 })

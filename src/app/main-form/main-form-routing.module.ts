@@ -13,6 +13,8 @@ import { ConcernsNeedComponent } from './concerns-need/concerns-need.component';
 import { OdsInputComponent } from './ods-input/ods-input.component';
 import { ProcessingInfoComponent } from './processing-info/processing-info.component';
 import { SendEmailComponent } from './send-email/send-email.component';
+import { ManagerProjectComponent } from './manager-project/manager-project.component';
+import { InformationProjectComponent } from './information-project/information-project.component';
 
 
 const routes: Routes = [
@@ -66,6 +68,14 @@ const routes: Routes = [
   {
     path: 'send-email',
     component: SendEmailComponent
+  },
+  {
+    path: 'project/manager',
+    component: ManagerProjectComponent
+  },
+  {
+    path: 'project/information',
+    component: InformationProjectComponent
   },
 
 

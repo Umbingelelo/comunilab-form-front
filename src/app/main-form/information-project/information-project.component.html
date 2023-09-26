@@ -1,1 +1,172 @@
-<p>information-project works!</p>
+<section class="min-h-screen background">
+  <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-0">
+    <div class="p-6 ">
+      <p class="text-6xl text-gray-900 dark:text-white" style="color: #3B865D;">Información</p>
+      <p class="text-6xl text-gray-900 dark:text-white mb-6" style="color: #3B865D;"> sobre el proyecto</p>
+    </div>
+    <div class="p-6 ">
+      <img class="h-auto ml-auto max-w-xs" src="../../../assets/images/logos/logo.png" alt="image description">
+    </div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-1 grid-rows-1 gap-0 mt-[-5rem]">
+    <div class="p-10 ">
+      <div class="mb-6">
+        <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre del
+          proyecto</label>
+        <input type="text" id="default-input"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" [(ngModel)]="hasWebsite" class="sr-only peer">
+        <div
+          class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+        </div>
+        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">¿Posee sitio web?</span>
+      </label>
+      <div *ngIf="hasWebsite">
+        <div class="mb-6">
+          <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">URL del sitio
+            web</label>
+          <input type="text" id="default-input"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+      </div>
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" [(ngModel)]="hasRRSS" class="sr-only peer">
+        <div
+          class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+        </div>
+        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">¿Posee redes sociales?</span>
+      </label>
+      <div *ngIf="hasRRSS">
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" [(ngModel)]="hasInstagram" class="sr-only peer">
+          <div
+            class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+          </div>
+          <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">¿Posee página de instagram?</span>
+        </label>
+        <div *ngIf="hasInstagram">
+          <div class="mb-6">
+            <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">URL de la
+              página de instagram</label>
+            <input type="text" id="default-input"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          </div>
+        </div>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" [(ngModel)]="hasFacebook" class="sr-only peer">
+          <div
+            class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+          </div>
+          <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">¿Posee página de facebook?</span>
+        </label>
+        <div *ngIf="hasFacebook">
+          <div class="mb-6">
+            <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">URL de la
+              página de facebook</label>
+            <input type="text" id="default-input"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          </div>
+        </div>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" [(ngModel)]="hasTwitter" class="sr-only peer">
+          <div
+            class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+          </div>
+          <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">¿Posee página de twitter?</span>
+        </label>
+        <div *ngIf="hasTwitter">
+          <div class="mb-6">
+            <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">URL de la
+              página de twitter</label>
+            <input type="text" id="default-input"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          </div>
+        </div>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" [(ngModel)]="hasOther" class="sr-only peer">
+          <div
+            class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+          </div>
+          <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">¿Posee otra red social?</span>
+        </label>
+        <div *ngIf="hasOther">
+          <div class="mb-6">
+            <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">URL de la
+              página de la otra red social</label>
+            <input type="text" id="default-input"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Problema u
+          oportunidad que resuelve</label>
+        <span class="text-xs text-gray-500 dark:text-gray-400">Señala cuál es el problema u oportunidad específica que
+          pretenden resolver, a quiénes les afecta dentro de la comunidad, y cómo les afecta</span>
+        <textarea id="default-input" rows="3"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+      </div>
+
+      <div class="mb-6">
+        <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Solución/es y
+          grado de innovación</label>
+        <span class="text-xs text-gray-500 dark:text-gray-400">En qué consiste la solución, o posibles soluciones que se
+          les han ocurrido, sus atributos principales y los beneficios que entrega a los usuarios. Qué ventajas
+          incorporan y como se diferencian de otras alternativas que hoy buscan resolver el mismo problema
+          identificado.</span>
+        <textarea id="default-input" rows="3"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+      </div>
+
+      <div class="mb-6">
+        <label for="default-input"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Motivación</label>
+        <span class="text-xs text-gray-500 dark:text-gray-400">¿Por qué quieren resolver la problemática que
+          detectaron?</span>
+        <span class="text-xs text-gray-500 dark:text-gray-400">¿Cuáles son las habilidades con lasque cuentan para poder
+          llevar a cabo la solución que proponen?</span>
+        <span class="text-xs text-gray-500 dark:text-gray-400">¿Qué expectativas esperan cumplir para la
+          comunidad?</span>
+        <textarea id="default-input" rows="3"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+      </div>
+
+      <div class="mb-6">
+        <label for="default-select" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Estado de
+          avance</label>
+        <span class="text-xs text-gray-500 dark:text-gray-400">¿En qué etapa se encuentra el proyecto?</span>
+        <select id="default-select"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option value="idea">Idea</option>
+          <option value="desarrollo">Desarrollo</option>
+          <option value="implementacion">Implementación</option>
+          <option value="finalizado">Finalizado</option>
+        </select>
+      </div>
+      <div class="mb-6">
+        <label for="budget-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Presupuesto
+          esperado</label>
+        <span class="text-xs text-gray-500 dark:text-gray-400">Selecciona el rango de presupuesto esperado para el
+          proyecto</span>
+        <input type="range" id="budget-range" name="budget-range" min="0" max="100" value="50"
+          class="block w-full mt-2">
+        <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400">
+          <span>0</span>
+          <span>150 + UF</span>
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="button" [routerLink]="['/project/manager']"
+          class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+          Atras</button>
+        <button type="button" [routerLink]="['/ods']"
+          class="ml-auto focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+          Siguiente</button>
+      </div>
+    </div>
+  </div>
+
+</section>
