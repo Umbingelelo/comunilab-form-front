@@ -6,9 +6,13 @@
       <form>
         <label for="message" class="block mb-2 mt-5 text-xl font-medium text-gray-900" style="color: #3B865D;">¿Cuáles
           son las mayores preocupaciones dentro de tu comunidad?</label>
+        <span class="text-xs text-gray-500 dark:text-gray-400"> ¿Cómo crees que tu idea puede ser afectada por la
+          comunidad?
+          ¿Crees que tu idea puede ser afectada por las autoridades? ¿Crees que tu idea puede ser afectada por la falta
+          de recursos? </span>
         <textarea id="message" rows="6" [(ngModel)]="concernsForm.concerns" name="message"
           class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Escribe tu sueño aquí..."></textarea>
+          placeholder="Escribe aqui tu respuesta"></textarea>
 
         <label for="message" class="block mb-2 mt-5 text-xl font-medium text-gray-900"
           style="color: #3B865D;">Selecciona la opción que represente el mayor riesgo para tu idea</label>
@@ -21,7 +25,7 @@
 
 
         <label for="message" class="block mb-2 mt-5 text-xl font-medium text-gray-900"
-          style="color: #3B865D;">Selecciona la opción el nivel de urgencia que crees que tiene tu idea</label>
+          style="color: #3B865D;">Selecciona el nivel de urgencia que crees que tiene tu idea</label>
 
         <input type="range" id="budget-range" name="budget-range" min="0" max="100" value="50" step="1"
           class="block w-full mt-2" [(ngModel)]="concernsForm.priority">
